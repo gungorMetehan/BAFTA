@@ -15,3 +15,12 @@ It's known that drama and comedy were the earliest genres of cinema, and they're
 BAFTA_film <- read.csv("https://raw.githubusercontent.com/gungorMetehan/BAFTA/main/BAFTA_film.csv")
 BAFTA_film[grepl("Drama", BAFTA_film$genres) == FALSE, ]
 ```
+## The Longest and The Shortest
+
+
+### R Codes
+```
+BAFTA_film <- read.csv("https://raw.githubusercontent.com/gungorMetehan/BAFTA/main/BAFTA_film.csv")
+BAFTA_film[which(BAFTA_film$duration == max(BAFTA_film$duration)), ]
+BAFTA_film[which(BAFTA_film$duration == min(BAFTA_film$duration)), ]
+```
