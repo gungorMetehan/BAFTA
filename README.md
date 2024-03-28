@@ -17,6 +17,10 @@ BAFTA_film[grepl("Drama", BAFTA_film$genres) == FALSE, ]
 ```
 ## The Longest and The Shortest
 
+| Year |           Film           |                Genres               | Duration |
+|:----:|:------------------------:|:-----------------------------------:|:--------:|
+| 1963 |    Lawrence of Arabia    | Adventure - Biography - Drama - War |    218   |
+| 1986 | The Purple Rose of Cairo |      Comedy - Fantasy - Romance     |    82    |
 
 ### R Codes
 ```
