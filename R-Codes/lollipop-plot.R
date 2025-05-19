@@ -2,26 +2,11 @@
 BAFTA_film <- read.csv("https://raw.githubusercontent.com/gungorMetehan/BAFTA/main/BAFTA_film.csv")
 
 # dataset
-freq <- c(nrow(BAFTA_film[grepl("Drama", BAFTA_film$genres) == T, ]),
-          nrow(BAFTA_film[grepl("Romance", BAFTA_film$genres) == T, ]),
-          nrow(BAFTA_film[grepl("Adventure", BAFTA_film$genres) == T, ]),
-          nrow(BAFTA_film[grepl("War", BAFTA_film$genres) == T, ]),
-          nrow(BAFTA_film[grepl("Comedy", BAFTA_film$genres) == T, ]),
-          nrow(BAFTA_film[grepl("Thriller", BAFTA_film$genres) == T, ]),
-          nrow(BAFTA_film[grepl("Biography", BAFTA_film$genres) == T, ]),
-          nrow(BAFTA_film[grepl("History", BAFTA_film$genres) == T, ]),
-          nrow(BAFTA_film[grepl("Family", BAFTA_film$genres) == T, ]),
-          nrow(BAFTA_film[grepl("Musical", BAFTA_film$genres) == T, ]),
-          nrow(BAFTA_film[grepl("Crime", BAFTA_film$genres) == T, ]),
-          nrow(BAFTA_film[grepl("Western", BAFTA_film$genres) == T, ]),
-          nrow(BAFTA_film[grepl("Music", BAFTA_film$genres) == T, ]),
-          nrow(BAFTA_film[grepl("Sport", BAFTA_film$genres) == T, ]),
-          nrow(BAFTA_film[grepl("Fantasy", BAFTA_film$genres) == T, ]),
-          nrow(BAFTA_film[grepl("Action", BAFTA_film$genres) == T, ]),
-          nrow(BAFTA_film[grepl("Mystery", BAFTA_film$genres) == T, ]))
+genres <- c("Drama", "Romance", "Adventure", "War", "Comedy", "Thriller", 
+            "Biography", "History", "Family", "Musical", "Crime", "Western", 
+            "Music", "Sport", "Fantasy", "Action", "Mystery")
 
-genres <- c("Drama", "Romance", "Adventure", "War", "Comedy", "Thriller", "Biography", "History", "Family", "Musical",
-            "Crime", "Western", "Music", "Sport", "Fantasy", "Action", "Mystery")
+freq <- unname(sapply(genres, function(g) sum(grepl(g, BAFTA_film$genres))))
 
 data4plot <- data.frame(genres, freq)
 
