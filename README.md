@@ -1,7 +1,7 @@
 # BAFTA
 BAFTA (British Academy of Film and Television Arts) Awards Data
 
-## $\textcolor{#508AA1}{No\ Drama,\ No\ BAFTA\ 'Best\ Film'\ Award}$
+## No Drama, No BAFTA 'Best Film' Award
 It's known that drama and comedy were the earliest genres of cinema, and they're still the most popular genres today.
 
 ![BAFTA](https://github.com/user-attachments/assets/5aac64f8-5156-4b72-81ba-77c6e4d59116)
@@ -20,7 +20,7 @@ Did you know that of the 77 films that won the BAFTA best film award, 73 contain
 BAFTA_film <- read.csv("https://raw.githubusercontent.com/gungorMetehan/BAFTA/main/BAFTA_film.csv")
 BAFTA_film[grepl("Drama", BAFTA_film$genres) == FALSE, ]
 ```
-## $\textcolor{#508AA1}{The\ Longest\ and\ The\ Shortest}$
+## The Longest and The Shortest
 
 | Year |           Film           |                Genres               | Duration |
 |:----:|:------------------------:|:-----------------------------------:|:--------:|
